@@ -397,11 +397,41 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 960px) {
   .project-grid { grid-template-columns: repeat(2, 1fr); }
 }
+@media (max-width: 768px) {
+  /* 手机端看板娘缩小，避免遮挡内容 */
+  #waifu {
+    transform: scale(.55);
+    transform-origin: left bottom;
+  }
+}
 @media (max-width: 640px) {
-  .project-grid { grid-template-columns: 1fr; }
-  .about-card { flex-direction: column; padding: 30px; }
+  body { font-size: 15px; }
+  .project-grid { grid-template-columns: 1fr; gap: 16px; }
+  .about-card { flex-direction: column; padding: 26px; gap: 20px; }
+  .about-avatar { width: 72px; height: 72px; }
   .post-card { flex-direction: column; align-items: flex-start; gap: 10px; padding: 20px 22px; }
-  .hero { padding: 50px 16px 50px; }
-  .hero-card { padding: 50px 7vw; }
-  .nav-links a { padding: 6px 10px; font-size: .85rem; }
+  .hero { padding: 40px 14px 44px; }
+  .hero-card { padding: 44px 7vw; border-radius: 26px; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+  .section { padding: 44px 16px; }
+  .section-head h2 { font-size: 1.5rem; }
+  .project-card { padding: 22px; }
+  .post-tag { align-self: flex-start; }
+  /* 导航：收起次要链接，防止挤出屏幕 */
+  .nav { padding: 10px 14px; width: calc(100% - 20px); margin-top: 10px; }
+  .nav-name { font-size: 1rem; }
+  .nav-name img { width: 28px; height: 28px; }
+  .nav-links { gap: 2px; }
+  .nav-links a { padding: 6px 9px; font-size: .85rem; white-space: nowrap; }
+  .nav-links a[href^="https://github.com"] { display: none; }
+  .footer { padding: 30px 16px 120px; }
+}
+
+/* 触屏细节优化 */
+a, .btn, .project-card, .post-card { -webkit-tap-highlight-color: transparent; }
+@media (hover: none) {
+  /* 触屏没有悬停态，点按反馈改为缩放 */
+  .project-card:active { transform: scale(.98); border-color: var(--pink); }
+  .post-card:active { transform: scale(.98); border-color: var(--blue); }
+  .btn:active { transform: scale(.96); }
 }
