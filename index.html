@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/live2d-widgets@0/waifu.css">
+<link rel="stylesheet" href="live2d/waifu.css">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -186,13 +186,16 @@
 </footer>
 
 <!-- Live2D 看板娘（GitHub 开源：stevenjoezhang/live2d-widget） -->
-<!-- 手动初始化，不用 autoload.js，因为它默认在手机端（屏宽 <768px）不加载 -->
-<script src="https://fastly.jsdelivr.net/npm/live2d-widgets@0/live2d.min.js"></script>
-<script src="https://fastly.jsdelivr.net/npm/live2d-widgets@0/waifu-tips.js"></script>
+<!-- 全部资源本地化（模型 hijiki 托管在本仓库），不再依赖不稳定的第三方 CDN -->
+<script src="live2d/live2d.min.js"></script>
+<script src="live2d/waifu-tips.js"></script>
 <script>
+// 固定使用本地第一个模型，避免默认 modelId=1 越界
+localStorage.setItem('modelId', '0');
+localStorage.setItem('modelTexturesId', '0');
 initWidget({
-  waifuPath: 'https://fastly.jsdelivr.net/npm/live2d-widgets@0/waifu-tips.json',
-  cdnPath: 'https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/'
+  waifuPath: 'live2d/waifu-tips.json',
+  cdnPath: 'live2d/api/'
 });
 </script>
 <script src="main.js"></script>
