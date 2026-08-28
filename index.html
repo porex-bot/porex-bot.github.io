@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>porex-bot の 小站</title>
+<meta name="description" content="porex-bot 的个人主页与博客">
+<link rel="icon" href="https://github.com/porex-bot.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- 樱花画布 -->
+<canvas id="sakura"></canvas>
+
+<!-- 顶部 -->
+<nav class="nav">
+  <a class="nav-name" href="#top">
+    <img src="https://github.com/porex-bot.png" alt="avatar">
+    porex-bot
+  </a>
+  <div class="nav-links">
+    <a href="#projects">项目</a>
+    <a href="#writing">文章</a>
+    <a href="#about">关于</a>
+    <a href="https://github.com/porex-bot" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="sky-scene" aria-hidden="true">
+      <div class="cloud cloud-1"></div>
+      <div class="cloud cloud-2"></div>
+      <div class="cloud cloud-3"></div>
+    </div>
+    <div class="hero-card">
+      <p class="hero-hello reveal">( ´ ▽ ` )ﾉ 你好呀</p>
+      <h1 class="reveal">这里是 <span class="hl">porex-bot</span><br>的小站～</h1>
+      <p class="hero-text reveal">
+        一个写代码的人，平时和 Java、Python 还有大模型打交道。
+        做了几个跟 AI Agent 有关的小工具，都放在
+        <a href="https://github.com/porex-bot" target="_blank" rel="noopener">GitHub</a> 上。
+        这里记一些踩坑和复盘，想到什么写什么。
+      </p>
+      <div class="hero-actions reveal">
+        <a class="btn btn-pink" href="#projects">看看项目 ↓</a>
+        <a class="btn btn-blue" href="https://github.com/porex-bot" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 项目 -->
+  <section class="section" id="projects">
+    <div class="section-head reveal">
+      <span class="section-deco">✿</span>
+      <h2>项目<span class="h2-sub">Projects</span></h2>
+      <p class="section-note">GitHub 上开源的一些东西，有用的没用的都在</p>
+    </div>
+
+    <div class="project-grid">
+      <a class="project-card reveal" href="https://github.com/porex-bot/Tuyu" target="_blank" rel="noopener">
+        <div class="project-head">
+          <span class="project-icon" style="background:#ffe3ec">🌸</span>
+          <span class="project-star">★ 1</span>
+        </div>
+        <h3>Tuyu</h3>
+        <p>全栈图像资产管理与协作平台。图多了以后，总得有个地方管。</p>
+        <span class="project-lang"><i style="background:#b07219"></i>Java</span>
+      </a>
+
+      <a class="project-card reveal" href="https://github.com/porex-bot/AgentHub" target="_blank" rel="noopener">
+        <div class="project-head">
+          <span class="project-icon" style="background:#e0f2fe">💠</span>
+        </div>
+        <h3>AgentHub</h3>
+        <p>AI Agent 工作空间，带对话记忆、RAG、工具调用和流式输出。</p>
+        <span class="project-lang"><i style="background:#b07219"></i>Java</span>
+      </a>
+
+      <a class="project-card reveal" href="https://github.com/porex-bot/tech-doc-qa-agent" target="_blank" rel="noopener">
+        <div class="project-head">
+          <span class="project-icon" style="background:#ede9fe">📚</span>
+        </div>
+        <h3>tech-doc-qa-agent</h3>
+        <p>企业技术文档的问答 Agent，基于 LLM 和向量数据库。</p>
+        <span class="project-lang"><i style="background:#3572A5"></i>Python</span>
+      </a>
+
+      <a class="project-card reveal" href="https://github.com/porex-bot/ai-agent-workflow" target="_blank" rel="noopener">
+        <div class="project-head">
+          <span class="project-icon" style="background:#fef3c7">⚡</span>
+        </div>
+        <h3>ai-agent-workflow</h3>
+        <p>给开发者和小团队用的 AI 自动化工作流平台。</p>
+        <span class="project-lang"><i style="background:#e34c26"></i>HTML</span>
+      </a>
+
+      <a class="project-card reveal" href="https://github.com/porex-bot/agent-skills-compat-matrix" target="_blank" rel="noopener">
+        <div class="project-head">
+          <span class="project-icon" style="background:#dcfce7">🧩</span>
+        </div>
+        <h3>agent-skills-compat-matrix</h3>
+        <p>Agent Skills 兼容性矩阵，查适配用的。</p>
+        <span class="project-lang"><i style="background:#3572A5"></i>Python</span>
+      </a>
+
+      <a class="project-card project-more reveal" href="https://github.com/porex-bot?tab=repositories" target="_blank" rel="noopener">
+        <div class="more-inner">
+          <span class="more-plus">＋</span>
+          <p>全部仓库 →</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 文章 -->
+  <section class="section" id="writing">
+    <div class="section-head reveal">
+      <span class="section-deco">❀</span>
+      <h2>文章<span class="h2-sub">Notes</span></h2>
+      <p class="section-note">开发路上记下来的东西，免得下次再踩一遍</p>
+    </div>
+
+    <div class="post-list">
+      <a class="post-card reveal" href="#">
+        <time>2026.08.28</time>
+        <div class="post-body">
+          <h3>搭一个文档问答 Agent 的踩坑记录</h3>
+          <p>向量库选型、分块、召回调优，一步一步来</p>
+        </div>
+        <span class="post-tag tag-pink">RAG</span>
+      </a>
+      <a class="post-card reveal" href="#">
+        <time>2026.08.15</time>
+        <div class="post-body">
+          <h3>SSE 流式输出，前后端各踩了几个坑</h3>
+          <p>为什么 Agent 的回复一定要"流"起来</p>
+        </div>
+        <span class="post-tag tag-blue">全栈</span>
+      </a>
+      <a class="post-card reveal" href="#">
+        <time>2026.08.02</time>
+        <div class="post-body">
+          <h3>为什么又造了一个工作流轮子</h3>
+          <p>轮子是次要的，顺手才是主要的</p>
+        </div>
+        <span class="post-tag tag-purple">随笔</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 关于 -->
+  <section class="section" id="about">
+    <div class="section-head reveal">
+      <span class="section-deco">✿</span>
+      <h2>关于<span class="h2-sub">About</span></h2>
+    </div>
+    <div class="about-card reveal">
+      <img class="about-avatar" src="https://github.com/porex-bot.png" alt="porex-bot 的头像">
+      <div class="about-text">
+        <p>
+          我相信工具应该解决问题，而不是制造新的问题。
+          手上这些项目，说到底是为了同一个朴素的念头：
+          让 AI 把重复的事干了，我好去干点别的 (￣▽￣)
+        </p>
+        <p class="about-skills">Java · Python · LLM · RAG · 向量数据库 · SSE</p>
+        <p>
+          有事可以在 <a href="https://github.com/porex-bot" target="_blank" rel="noopener">GitHub</a> 上找我，
+          Issue 和 Discussion 都会看。
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 porex-bot · 部署在 GitHub Pages · (｡･ω･｡)</p>
+</footer>
+
+<!-- Live2D 看板娘（GitHub 开源：stevenjoezhang/live2d-widget） -->
+<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
