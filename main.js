@@ -2,7 +2,8 @@
 const canvas = document.getElementById('sakura');
 const ctx = canvas.getContext('2d');
 let W, H, petals = [];
-const PETAL_COUNT = 32;
+// 手机端减少花瓣数量，省电流畅
+const PETAL_COUNT = innerWidth < 768 ? 14 : 32;
 
 function resize() {
   W = canvas.width = innerWidth;
