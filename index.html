@@ -186,16 +186,16 @@
 </footer>
 
 <!-- Live2D 看板娘（GitHub 开源：stevenjoezhang/live2d-widget） -->
-<!-- 全部资源本地化（模型 hijiki 托管在本仓库），不再依赖不稳定的第三方 CDN -->
+<!-- 脚本本地化保证稳定加载；模型用 CDN 原版默认女孩形象 -->
 <script src="live2d/live2d.min.js"></script>
 <script src="live2d/waifu-tips.js"></script>
 <script>
-// 固定使用本地第一个模型，避免默认 modelId=1 越界
-localStorage.setItem('modelId', '0');
-localStorage.setItem('modelTexturesId', '0');
+// 固定为官方默认模型（看板娘女孩），覆盖此前缓存
+localStorage.setItem('modelId', '1');
+localStorage.setItem('modelTexturesId', '53');
 initWidget({
   waifuPath: 'live2d/waifu-tips.json',
-  cdnPath: 'live2d/api/'
+  cdnPath: 'https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/'
 });
 </script>
 <script src="main.js"></script>
